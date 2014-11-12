@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CCB57E0C-6B5B-4FB2-A425-5A662ADA0A7B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>chatDemo</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CEC8F10BF8EA7E41F791F7C5F3C3AD2FCB057923</key>
+		<string>https://github.com/sameertotey/chatDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>chatDemo.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CEC8F10BF8EA7E41F791F7C5F3C3AD2FCB057923</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sameertotey/chatDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CEC8F10BF8EA7E41F791F7C5F3C3AD2FCB057923</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CEC8F10BF8EA7E41F791F7C5F3C3AD2FCB057923</string>
+			<key>IDESourceControlWCCName</key>
+			<string>chatDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

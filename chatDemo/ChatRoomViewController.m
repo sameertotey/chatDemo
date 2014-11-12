@@ -164,27 +164,19 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatCell *cell = (ChatCell *)[tableView dequeueReusableCellWithIdentifier:@"chatCellIdentifier"];
     
-    cell.frame = CGRectMake(0, 0, CGRectGetWidth(self.view.frame), MAXFLOAT);
     NSUInteger row = [self.chatData count] - indexPath.row - 1;
-    
     NSString *chatText = [[self.chatData objectAtIndex:row] objectForKey:@"text"];
-    UIFont *font = [UIFont systemFontOfSize:14];
-    
-    CGSize size = [chatText sizeWithAttributes:@{NSFontAttributeName : font}];
-    cell.textString.frame = CGRectMake(75, 14, size.width + 20, size.height + 20);
-    cell.textString.font = font;
     cell.textString.text = chatText;
     
     NSDate *theDate = [[self.chatData objectAtIndex:row] objectForKey:@"date"];
-    
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"HH:mm a"];
     NSString *timeString = [formatter stringFromDate:theDate];
     cell.timeLabel.text = timeString;
     
     cell.userLabel.text = [[self.chatData objectAtIndex:row] objectForKey:@"userName"];
-    
-    
+
+
     return cell;
 }
 
@@ -198,24 +190,18 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellText = [[self.chatData objectAtIndex:self.chatData.count - indexPath.row - 1] objectForKey:@"text"];
-    UIFont *font = [UIFont systemFontOfSize:14];
-    CGSize constraintSize = CGSizeMake(297.0f, MAXFLOAT);
-//    CGSize labelSize = [cellText sizeWithFont:font constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
-//    CGSize size = [cellText sizeWithAttributes:@{NSFontAttributeName : font}];
+    UIFont *font = [UIFont systemFontOfSize:17];
+    CGSize constraintSize = CGSizeMake(CGRectGetWidth(self.view.frame) * 0.60, CGRectGetHeight(self.view.frame));
+    
+    NSStringDrawingContext *ctx = [[NSStringDrawingContext alloc] init];
 
     NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading;
     
-    CGRect labelRect = [cellText boundingRectWithSize:constraintSize options:options attributes:@{NSFontAttributeName : font} context:nil];
+    CGRect labelRect = [cellText boundingRectWithSize:constraintSize options:options attributes:@{NSFontAttributeName : font} context:ctx];
     CGFloat textHeight = labelRect.size.height + 10;
     
-    // now check the username label
-    constraintSize = CGSizeMake(89, MAXFLOAT);
-    cellText = [[self.chatData objectAtIndex:self.chatData.count - indexPath.row - 1] objectForKey:@"userName"];
-    labelRect = [cellText boundingRectWithSize:constraintSize options:options attributes:@{NSFontAttributeName : font} context:nil];
-    CGFloat labelHeight = labelRect.size.height * 2 + 10;
-    
-    // return the higher value
-    return MAX(labelHeight, textHeight);
+    // atleast return 100
+    return textHeight > 100 ? textHeight : 100;
 }
 
 #pragma mark - Parse

@@ -12,5 +12,9 @@
 @property (nonatomic, strong) IBOutlet UILabel *userLabel;
 @property (nonatomic, strong) IBOutlet UITextView *textString;
 @property (nonatomic, strong) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textStringHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *textStringWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *userLabelWidthConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *userLabelHeightConstraint;
 
 @end
