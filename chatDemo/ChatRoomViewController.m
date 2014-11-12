@@ -25,7 +25,7 @@
     self.userName = @"John Appleseed";
 
     [self reloadTableViewDatasource];
-    _tfEntry.clearButtonMode = UITextFieldViewModeWhileEditing;
+//    _tfEntry.clearButtonMode = UITextFieldViewModeWhileEditing;
     [self registerForKeyboardNotifications];
     
 }
@@ -77,7 +77,7 @@
 
 - (IBAction)textFieldDoneEditing:(UITextField *)sender {
     NSLog(@"The text content: %@", self.tfEntry.text);
-    
+    [self.tfEntry resignFirstResponder];
 }
 
 - (IBAction)backgroundTap:(id)sender {

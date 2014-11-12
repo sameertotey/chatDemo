@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-i1-VcX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="0.0" y="40" width="600" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -138,7 +138,7 @@
                                                     </variation>
                                                 </label>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmy-1B-3Z2">
-                                                    <rect key="frame" x="99.5" y="18" width="444" height="40"/>
+                                                    <rect key="frame" x="99" y="18" width="444" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="4Bc-tz-74c"/>
@@ -182,10 +182,10 @@
                                     <outlet property="delegate" destination="uXA-DW-21a" id="5uZ-as-gkb"/>
                                 </connections>
                             </tableView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="text field to enter comments" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-C3-hCD">
-                                <rect key="frame" x="198" y="521" width="203" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="text field to enter comments" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="WGL-C3-hCD">
+                                <rect key="frame" x="56" y="521" width="488" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="99" y="285" width="203" height="30"/>
                                 </variation>
@@ -200,9 +200,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="Qw2-i1-VcX" secondAttribute="trailing" constant="-16" id="bJW-w1-wC7"/>
                             <constraint firstItem="Qw2-i1-VcX" firstAttribute="leading" secondItem="aRt-uX-9Qw" secondAttribute="leadingMargin" constant="-16" id="eHV-2Z-HkM"/>
                             <constraint firstItem="zMa-nm-ohT" firstAttribute="top" secondItem="WGL-C3-hCD" secondAttribute="bottom" id="f3V-Wh-4qe"/>
-                            <constraint firstItem="zMa-nm-ohT" firstAttribute="top" secondItem="Qw2-i1-VcX" secondAttribute="bottom" constant="-49" id="pu6-A2-BTs"/>
-                            <constraint firstAttribute="centerX" secondItem="WGL-C3-hCD" secondAttribute="centerX" id="qr4-3d-Ngs"/>
-                            <constraint firstItem="Qw2-i1-VcX" firstAttribute="top" secondItem="kpx-sK-d36" secondAttribute="bottom" constant="-20" id="sjm-yW-Bdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WGL-C3-hCD" secondAttribute="trailing" constant="40" id="h8B-eb-s3a"/>
+                            <constraint firstItem="zMa-nm-ohT" firstAttribute="top" secondItem="Qw2-i1-VcX" secondAttribute="bottom" constant="30" id="pu6-A2-BTs"/>
+                            <constraint firstItem="Qw2-i1-VcX" firstAttribute="top" secondItem="kpx-sK-d36" secondAttribute="bottom" constant="20" id="sjm-yW-Bdg"/>
+                            <constraint firstItem="WGL-C3-hCD" firstAttribute="leading" secondItem="aRt-uX-9Qw" secondAttribute="leadingMargin" constant="40" id="vUT-it-ume"/>
                         </constraints>
                         <variation key="widthClass=compact">
                             <mask key="subviews">

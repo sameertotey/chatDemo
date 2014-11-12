@@ -30,19 +30,17 @@
 }
 
 - (void) layoutSubviews {
-    //[super layoutSubviews];
-    // Before layout, calculate the intrinsic size of the labels (the size they "want" to be), and add 2 to the height
+    [super layoutSubviews];
+    // Before layout, calculate the intrinsic size of the labels (the size they "want" to be), and set the appropriate constraints
     
     NSStringDrawingContext *ctx = [[NSStringDrawingContext alloc] init];
-        CGSize maxLabelSize = CGSizeMake(CGRectGetWidth(self.contentView.bounds) * 0.30, MAXFLOAT);
+    CGSize maxLabelSize = CGSizeMake(CGRectGetWidth(self.contentView.bounds) * 0.30, MAXFLOAT);
     NSStringDrawingOptions options = NSStringDrawingUsesLineFragmentOrigin;
     UIFont *font = [UIFont systemFontOfSize:17];
     CGRect usernameBounds = [self.userLabel.text boundingRectWithSize:maxLabelSize options:options attributes:@{NSFontAttributeName : font} context:ctx];
     [self.userLabel.text drawInRect:usernameBounds withAttributes:@{NSFontAttributeName : font}];
     self.userLabelWidthConstraint.constant = usernameBounds.size.width;
     self.userLabelHeightConstraint.constant = usernameBounds.size.height;
-    
-//    CGRect timeBounds = [self.timeLabel.text boundingRectWithSize:maxLabelSize options:options attributes:@{NSFontAttributeName : font}  context:ctx];
     
     CGSize maxTextSize = CGSizeMake(CGRectGetWidth(self.contentView.bounds) * 0.60, MAXFLOAT);
     
@@ -53,17 +51,6 @@
     self.textStringHeightConstraint.constant = textBounds.size.height;
     self.textStringWidthConstraint.constant = textBounds.size.width;
     
-//        cell.userLabel.frame = CGRectMake(20, 20, CGRectGetWidth(usernameBounds), CGRectGetHeight(usernameBounds));
-    //
-    //    CGFloat maxX = CGRectGetMaxX(cell.userLabel.frame);
-    //    CGFloat maxY = CGRectGetMaxY(cell.userLabel.frame);
-    //
-    //    cell.timeLabel.frame = CGRectMake(20, maxY + 20, CGRectGetWidth(timeBounds), CGRectGetHeight(timeBounds));
-    //
-    //    cell.textString.frame = CGRectMake(maxX + 20, 20, CGRectGetWidth(textBounds), CGRectGetHeight(textBounds));
-//        [self.contentView sizeToFit];
-
-    [super layoutSubviews];
 }
 
 @end
