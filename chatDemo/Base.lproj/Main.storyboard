@@ -98,7 +98,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="100" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Qw2-i1-VcX">
-                                <rect key="frame" x="0.0" y="40" width="600" height="481"/>
+                                <rect key="frame" x="0.0" y="20" width="600" height="501"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -161,7 +161,6 @@
                                                 <constraint firstItem="tmy-1B-3Z2" firstAttribute="top" secondItem="O0d-sE-EDm" secondAttribute="top" id="jX0-62-Jza"/>
                                                 <constraint firstItem="DW6-k4-gkk" firstAttribute="leading" secondItem="O0d-sE-EDm" secondAttribute="leading" id="tbJ-Zj-8b5"/>
                                             </constraints>
-                                            <variation key="widthClass=compact"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="textString" destination="tmy-1B-3Z2" id="CD7-lC-Fsg"/>
@@ -202,7 +201,7 @@
                             <constraint firstItem="zMa-nm-ohT" firstAttribute="top" secondItem="WGL-C3-hCD" secondAttribute="bottom" id="f3V-Wh-4qe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WGL-C3-hCD" secondAttribute="trailing" constant="40" id="h8B-eb-s3a"/>
                             <constraint firstItem="zMa-nm-ohT" firstAttribute="top" secondItem="Qw2-i1-VcX" secondAttribute="bottom" constant="30" id="pu6-A2-BTs"/>
-                            <constraint firstItem="Qw2-i1-VcX" firstAttribute="top" secondItem="kpx-sK-d36" secondAttribute="bottom" constant="20" id="sjm-yW-Bdg"/>
+                            <constraint firstItem="Qw2-i1-VcX" firstAttribute="top" secondItem="kpx-sK-d36" secondAttribute="bottom" id="sjm-yW-Bdg"/>
                             <constraint firstItem="WGL-C3-hCD" firstAttribute="leading" secondItem="aRt-uX-9Qw" secondAttribute="leadingMargin" constant="40" id="vUT-it-ume"/>
                         </constraints>
                         <variation key="widthClass=compact">
