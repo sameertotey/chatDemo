@@ -188,6 +188,20 @@
     return 100;
 }
 
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    [tableView setEditing:YES animated:YES];
+//}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSUInteger index = [self.chatData count] - indexPath.row - 1;
+        NSLog(@"inside the swipe to delete %lu and %lu", (unsigned long)indexPath.row, (unsigned long)index);
+        PFObject *objectToDelete = [self.chatData objectAtIndex:index];
+        NSLog(@"The object is %@", objectToDelete);
+        [objectToDelete deleteInBackground];
+    }
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString *cellText = [[self.chatData objectAtIndex:self.chatData.count - indexPath.row - 1] objectForKey:@"text"];
     UIFont *font = [UIFont systemFontOfSize:17];
